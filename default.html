@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function intr(msg = "主人很帅") {
+        //     console.log(`我的自我介绍是：${msg}`);
+        // }
+        function intr(msg) {
+            msg === undefined && (msg = "主人很帅啊");
+            console.log(`我的自我介绍是：${msg}`);
+        }
+        intr("you can you up");
+        intr();
+
+        // 肯德基点餐
+        function fun(zhushi = "香辣鸡腿堡", xiaochi = "薯条", yinliao = "可乐") {
+            console.log(`
+                你的套餐是：
+                主食：${zhushi}
+                小吃：${xiaochi}
+                饮料：${yinliao}
+            `);
+        }
+        fun();
+    </script>
+</body>
+
+</html>

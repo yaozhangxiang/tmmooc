@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [2, 7, 5, 3];
+        console.log(Math.max(...arr)); //7   调用函数时打散数组...
+        console.log(Math.min(2, 7, 5, 3)); //2
+        var arr2 = arr.slice();
+        console.log(arr2); //复制
+        console.log(arr == arr2); //false
+        var arr3 = [...arr];
+
+        // 拼接二个数组
+        var add1 = [1, 2, 3];
+        var add2 = [4, 5, 6];
+        var add3 = [7, 8, 9];
+        var add4 = [].concat(add1, add2, add3);
+        var add5 = [...add1, ...add2, ...add3];
+        console.log(add4, add5);
+
+        // 浅克隆一个对象
+        var obj1 = {
+            x: 1,
+            y: 2
+        };
+        var obj2 = {...obj1
+        };
+        console.log(obj2);
+        console.log(obj1 == obj2); //false，二个对象
+
+        // 合并二个对象
+        var obj1 = {
+            x: 1,
+            y: 2
+        };
+        var obj2 = {
+            n: 1,
+            m: 2
+        };
+        var obj3 = Object.assign({}, obj1, obj2);
+        var obj4 = {...obj1,
+            ...obj2
+        };
+        console.log(obj3, obj4);
+    </script>
+</body>
+
+</html>

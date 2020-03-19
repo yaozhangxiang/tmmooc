@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [12, 1, 123, 13, 32];
+        // arr.sort(function(a, b) {
+        //     return a - b
+        // });
+        // 简写
+        arr.sort((a, b) => a - b);
+        console.log(arr);
+
+        var str = "you can you up";
+        // str = str.replace(/\b[a-z]/g, function(key) {
+        //     return key.toUpperCase();
+        // });
+        // 简写
+        str = str.replace(/\b[a-z]/g, key => key.toUpperCase());
+        console.log(str);
+
+        var teachers = ["亮亮", "然然", "东东"];
+        // teachers.forEach(function(elem) {
+        //     console.log(`${elem}--到`);
+        // });
+        // 简写
+        teachers.forEach(elem => console.log(`${elem}--到`));
+        // var arr1 = [1, 2, 3, 4, 5];
+
+
+        // var add = function(a, b) {
+        //     return a + b
+        // };
+        // 简写
+        var add = (a, b) => a + b;
+        console.log(add(3, 5));
+
+        // setInterval(function() {
+        //     console.log(`滴滴`);
+        // }, 1000);
+        //简写
+        setInterval(() => console.log(`滴滴`), 1000);
+
+        var arr1 = [1, 2, 3, 4, 5];
+        // var arr2 = arr1.map(function(elem) {
+        //     return elem * 2;
+        // });
+        // 简写
+        var arr2 = arr1.map(elem => elem * 2);
+        console.log(arr2);
+
+        // (function() {
+        //     console.log(`111`);
+        // })();
+        // 简写
+        (() => console.log(`111`))();
+    </script>
+</body>
+
+</html>

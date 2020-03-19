@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var names = ["东东", "然然", "亮亮"];
+        // for (var i = 0; i < names.length; i++) {
+        //     console.log(`${names[i]}--到！`);
+        // }
+        for (var n of names) {
+            console.log(`${n}-到！`);
+        }
+
+        function add() {
+            var sum = 0;
+            // for (var j = 0; j < arguments.length; j++) {
+            //     sum += arguments[j];
+            // }
+            // 可写成
+            for (var n of arguments) {
+                sum += n;
+            }
+            return sum;
+        }
+        console.log(add(1, 2, 3)); //6
+    </script>
+</body>
+
+</html>

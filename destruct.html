@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 数组解构
+        var date = [2020, 3, 18];
+        //  console.log(date[0],date[1],date[2]);
+        // var x=date[0];
+        // var y=date[1];
+        // var z=date[2];
+        // 想要年月日
+        var [x, y, z] = date;
+        console.log(x, y, z);
+        // 想要月日,前面空的需要加逗号
+        var [, y, z] = date;
+        console.log(y, z);
+
+        // 交换二个变量值，不声明三个变量
+        var a = 5,
+            b = 8,
+            [a, b] = [b, a]
+        console.log(a, b); //8，5
+
+        // 对象解构
+        var user = {
+                uid: 1001,
+                uname: "dingding",
+                uage: 25,
+                login: function() {
+                    console.log(`登录`);
+                },
+                reg: function() {
+                    console.log(`注册`);
+                },
+                logout: function() {
+                    console.log(`注销`);
+                },
+                changePwd: function() {
+                    console.log(`修改密码`);
+                }
+            }
+            // var {
+            //     uname: uname,
+            //     logout: logout
+            // } = user;
+            // 当前后属性名和变量名相同时，其实可以写一个
+        var {
+            uname,
+            logout
+        } = user;
+        console.log(`用户名：${uname}`);
+        logout();
+    </script>
+</body>
+
+</html>

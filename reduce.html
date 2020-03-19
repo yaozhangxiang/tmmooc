@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 对数组中的元素求和
+        var arr = [1, 2, 3, 4, 5];
+        var result = arr.reduce(function(prev, elem) {
+            // 把当前元素值和截止到目前的汇总值相加，计算新的汇总值，返回给数组
+            return prev + elem; //类似于捐款箱捐款
+        }, 0);
+        // 从0开始汇总，累加
+        console.log(result);
+
+        // 方法二：
+        for (var i = 0, sum = 0; i < arr.length; i++) {
+            sum += arr[i];
+            // console.log(arr[i]);
+        }
+        console.log(sum);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var lilei = { //不是作用域
+            sname: "li lei",
+            friends: ["亮亮", "然然", "东东"],
+            // say: function() {
+            // 上面这可以简写成下面这，但是不能改成say:(){,这样改的话里面的this指向全局window，因为var lilei这不是作用域
+            say() {
+                // 遍历李磊好友列表中每个朋友
+                // this.friends.forEach(function(elem) {
+                //     // 因为回调函数在主函数内相当于匿名函数方式自调方式执行，this->window
+                //     console.log(`${this.sname}认识${elem}`)
+                // })
+                // 使用箭头函数可以使内外函数一致，
+                this.friends.forEach(elem => console.log(`${this.sname}认识${elem}`))
+            }
+        }
+        lilei.say();
+    </script>
+</body>
+
+</html>
